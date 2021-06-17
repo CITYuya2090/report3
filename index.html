@@ -63,7 +63,7 @@
    // バンプマップ読み込み2
   var bump = textureLoader.load("sand_bump.jpg");
   mat2.bumpMap = bump;
-  mat2.bumpscale = 0.5;
+  mat2.bumpscale = 0.2;
     
   // 平面を作成
   var planeGeometry = new THREE.PlaneGeometry(50,50,50,50);
@@ -81,7 +81,7 @@
   // バンプマップ読み込み3
   var bump = textureLoader.load("stone_bump.jpg");
   mat3.bumpMap = bump;
-  mat3.bumpscale = 0.5;
+  mat3.bumpscale = 0.3;
      
   // 円柱を作成
   var cylinderGeometry = new THREE.CylinderGeometry( 0.7, 0.7, 8, 50 );
