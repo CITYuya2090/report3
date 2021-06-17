@@ -61,6 +61,10 @@
   // 初回実行
   var update = function() {
     requestAnimationFrame(update);
+    
+    // 箱を回転させる
+    box.rotation.x += 0.001;
+    box.rotation.y += 0.001;
 
     renderer.render(scene, camera);
   };
