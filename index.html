@@ -76,10 +76,15 @@ var textureLoader = new THREE.TextureLoader();
   // シーンに追加
   scene.add(directionalLight4);
     
-  // 雲1をスプライトで作成
-  var textureLoader = new THREE.TextureLoader();  
+  // 雲1テクスチャー読み込み
   var texture1 = textureLoader.load("img/cloud1-1.png");
-  const material1 = new THREE.SpriteMaterial({ map: texture1,});
+  var mat1 = new THREE.MeshLambertMaterial({transparent: true});
+  mat1.map = texture1;
+
+  // 木1を作成(原点に作成)
+  var cloud1 = new THREE.Mesh(geometry, mat1);
+  tree1.position.set(100, 0, 100);
+  scene.add(cloud1);
 
   const sprite1 = new THREE.Sprite(material1);
   sprite1.position.x = 0;
