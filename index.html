@@ -79,9 +79,9 @@
   mat3.map = texture3;
 
   // バンプマップ読み込み3
-  //var bump3 = textureLoader.load("sandstone_bump.jpg");
-  //mat3.bumpMap = bump3;
- // mat3.bumpscale = 0.1;
+  var bump3 = textureLoader.load("sandstone_bump.jpg");
+  mat3.bumpMap = bump3;
+  mat3.bumpscale = 0.05;
      
   // 円柱を作成
   var cylinderGeometry = new THREE.CylinderGeometry( 0.7, 0.7, 8, 50 );
@@ -103,6 +103,13 @@
   scene.add( cylinder4 ); 
   scene.add( cylinder5 );
   scene.add( cylinder6 );
+    
+  // 柱用平面を作成
+  var planeGeometry = new THREE.PlaneGeometry(1,1,1,1);
+  var plane = new THREE.Mesh(planeGeometry,mat2);
+  plane.rotation.set( -Math.PI/2, 0, 0 );
+  plane.position.set(1,11,15);
+  scene.add( plane );
     
  // 平行光源
   var directionalLight1 = new THREE.DirectionalLight(0xffffff);
