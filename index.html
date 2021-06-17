@@ -56,13 +56,13 @@
     
   // テクスチャー読み込み2
   var textureLoader = new THREE.TextureLoader();  
-  var texture = textureLoader.load("sand.jpg");
+  var texture2 = textureLoader.load("sand.jpg");
   var mat2 = new THREE.MeshPhongMaterial();
-  mat2.map = texture;
+  mat2.map = texture2;
     
    // バンプマップ読み込み2
-  var bump = textureLoader.load("sand_bump.jpg");
-  mat2.bumpMap = bump;
+  var bump2 = textureLoader.load("sand_bump.jpg");
+  mat2.bumpMap = bump2;
   mat2.bumpscale = 0.;
     
   // 平面を作成
@@ -74,13 +74,13 @@
   
   // テクスチャー読み込み3
   var textureLoader = new THREE.TextureLoader();  
-  var texture = textureLoader.load("stone.jpg");
+  var texture3 = textureLoader.load("stone.jpg");
   var mat3 = new THREE.MeshPhongMaterial();
-  mat3.map = texture;
+  mat3.map = texture3;
 
   // バンプマップ読み込み3
-  var bump = textureLoader.load("stone_bump.jpg");
-  mat3.bumpMap = bump;
+  var bump3 = textureLoader.load("stone_bump.jpg");
+  mat3.bumpMap = bump3;
   mat3.bumpscale = 0.3;
      
   // 円柱を作成
