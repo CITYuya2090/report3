@@ -23,8 +23,6 @@
     var renderer = new THREE.WebGLRenderer();
     renderer.setSize(width, height);
     document.body.appendChild(renderer.domElement);
-    // レンダラー：シャドウを有効にする
-   // renderer.shadowMap.enabled = true;
     // 背景の色を設定
     renderer.setClearColor(0x87CEFA);
   
@@ -93,12 +91,6 @@
   var cylinder4 = new THREE.Mesh( cylinderGeometry, mat3 );
   var cylinder5 = new THREE.Mesh( cylinderGeometry, mat3 );
   var cylinder6 = new THREE.Mesh( cylinderGeometry, mat3 );
-  //cylinder.castShadow = true; 
-  //cylinder2.castShadow = true; 
- // cylinder3.castShadow = true; 
- // cylinder4.castShadow = true; 
- // cylinder5.castShadow = true; 
-//  cylinder6.castShadow = true; 
   cylinder.position.set( 16, -3, 2 );
   cylinder2.position.set( 8.5, -3, 8.5 );
   cylinder3.position.set( 1, -3, 15 );    //完成
@@ -120,12 +112,6 @@
   var box4 = new THREE.Mesh(geometry, mat3);
   var box5 = new THREE.Mesh(geometry, mat3);
   var box6 = new THREE.Mesh(geometry, mat3);
- // box.castShadow = true; 
-  //box2.castShadow = true; 
- // box3.castShadow = true; 
- // box4.castShadow = true; 
- // box5.castShadow = true; 
- // box6.castShadow = true; 
   box.rotation.set( 0, -Math.PI/1.315, 0 );
   box2.rotation.set( 0, -Math.PI/1.315, 0 );
   box3.rotation.set( 0, -Math.PI/1.315, 0 );  
@@ -160,7 +146,6 @@
     
  // 平行光源
   var directionalLight1 = new THREE.DirectionalLight(0xffffff);
- // directionalLight1.castShadow = true;
   directionalLight1.position.set(50, 50, 50);
   // シーンに追加
   scene.add(directionalLight1);
@@ -174,13 +159,6 @@
   directionalLight3.position.set(50, -50, 50);
   // シーンに追加
   scene.add(directionalLight3);
-    
-  //var directionalLight4 = new THREE.DirectionalLight(0xffffff);
-  //directionalLight4.position.set(-100, -100, -100);
-  // シーンに追加
-  //scene.add(directionalLight4);
-    
-  
   
  tick();
     
