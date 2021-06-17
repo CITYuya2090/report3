@@ -66,6 +66,11 @@ var textureLoader = new THREE.TextureLoader();
   directionalLight3.position.set(100, -100, 100);
   // シーンに追加
   scene.add(directionalLight3);
+    
+  var directionalLight4 = new THREE.DirectionalLight(0xffffff);
+  directionalLight4.position.set(-100, -100, -100);
+  // シーンに追加
+  scene.add(directionalLight4);
   
  tick();
     
