@@ -16,8 +16,8 @@
  <script>
   var init = function() {
 
-    var width = 960,
-        height = 540;
+    var width = 800,
+        height = 600;
   
     // レンダラーを作成
     var renderer = new THREE.WebGLRenderer();
@@ -77,8 +77,18 @@ var textureLoader = new THREE.TextureLoader();
   var cylinderGeometry = new THREE.CylinderGeometry( 0.7, 0.7, 8, 50 );
   var cylinderMaterial = new THREE.MeshPhongMaterial( {color: 0x0000ff} );
   var cylinder = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
+  var cylinder2 = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
+  var cylinder3 = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
+  //var cylinder4 = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
   cylinder.position.set( 15, -2, 5 );
+  cylinder.position.set( 13, -2, 7 );
+  cylinder.position.set( 11, -2, 9 );
+  //cylinder.position.set( 15, -2, 5 );
   scene.add( cylinder );
+  scene.add( cylinder2 );
+  scene.add( cylinder3 );
+    
+  
 
 
 
