@@ -39,12 +39,12 @@
 
  // テクスチャー読み込み
 var textureLoader = new THREE.TextureLoader();  
-  var texture = textureLoader.load("metal.jpg");
+  var texture = textureLoader.load("piramid.jpg");
   var mat = new THREE.MeshPhongMaterial();
   mat.map = texture;
 
   // バンプマップ読み込み
-  var bump = textureLoader.load("metal_bump.png");
+  var bump = textureLoader.load("piramid_bump.jpg");
   mat.bumpMap = bump;
   mat.bumpscale = 0.5;
 
