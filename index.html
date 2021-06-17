@@ -85,13 +85,6 @@ var textureLoader = new THREE.TextureLoader();
   var cloud1 = new THREE.Mesh(geometry, mat1);
   cloud1.position.set(10, 0, 10);
   scene.add(cloud1);
-
-  const sprite1 = new THREE.Sprite(material1);
-  sprite1.position.x = 0;
-  sprite1.position.y = 10;
-  sprite1.position.z = 0;
-  sprite1.scale.set(10,10,10);
-  scene.add(sprite1);
   
  tick();
     
