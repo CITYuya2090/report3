@@ -30,7 +30,7 @@
     // カメラを作成
     const camera = new THREE.PerspectiveCamera(45, width / height);
     // カメラの初期座標を設定
-    camera.position.set(0, 0, 0.5);
+    camera.position.set(0, 0, 1000);
     
     // カメラコントローラーを作成
     const controls = new THREE.OrbitControls(camera,document.body);
@@ -47,24 +47,24 @@ var textureLoader = new THREE.TextureLoader();
   mat.bumpscale = 0.3;
 
   // 箱を作成
-  var geometry = new THREE.BoxGeometry(1, 1, 1);
+  var geometry = new THREE.BoxGeometry(300, 300, 300);
   var box = new THREE.Mesh(geometry, mat);
   box.position.z = -5;
   scene.add(box);
 
  // 平行光源
   var directionalLight1 = new THREE.DirectionalLight(0xffffff);
-  directionalLight1.position.set(1, 1, 1);
+  directionalLight1.position.set(100, 100, 100);
   // シーンに追加
   scene.add(directionalLight1);
 
   var directionalLight2 = new THREE.DirectionalLight(0xffffff);
-  directionalLight2.position.set(-10, 1, 1);
+  directionalLight2.position.set(-100, 100, 100);
   // シーンに追加
   scene.add(directionalLight2);
 
  var directionalLight3 = new THREE.DirectionalLight(0xffffff);
-  directionalLight3.position.set(1, -10, 1);
+  directionalLight3.position.set(100, -100, 100);
   // シーンに追加
   scene.add(directionalLight3);
   
