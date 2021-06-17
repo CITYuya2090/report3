@@ -49,10 +49,18 @@ var textureLoader = new THREE.TextureLoader();
   mat.bumpscale = 0.5;
     
   //角すい〜円すい
- // var coneGeometry = new THREE.ConeGeometry( 10, 13, 4); 
+  var coneGeometry = new THREE.ConeGeometry( 10, 13, 4); 
   //半径、高さ、底面の分割数
-  //var cone = new THREE.Mesh(coneGeometry, mat);
- // scene.add(cone);
+  var cone = new THREE.Mesh(coneGeometry, mat);
+  scene.add(cone);
+    
+  // 平面を作成
+  var planeGeometry = new THREE.PlaneGeometry(5,5,5,5);
+  var planeMaterial = new THREE.MeshBasicMaterial({color: 0x00ff00});
+  var plane = new THREE.Mesh(planeGeometry,planeMaterial);
+  plane.rotation.set( -Math.PI/2, 0, 0 );
+  plane.position.set(0,-1,0);
+
 
 
  // 平行光源
@@ -75,16 +83,6 @@ var textureLoader = new THREE.TextureLoader();
   directionalLight4.position.set(-100, -100, -100);
   // シーンに追加
   scene.add(directionalLight4);
-    
-  // 雲1テクスチャー読み込み
-  var texture1 = textureLoader.load("img/cloud1-1.png");
-  var mat1 = new THREE.MeshLambertMaterial({transparent: true});
-  mat1.map = texture1;
-
-  // 木1を作成(原点に作成)
-  var cloud1 = new THREE.Mesh(geometry, mat1);
-  cloud1.position.set(10, 0, 10);
-  scene.add(cloud1);
   
  tick();
     
