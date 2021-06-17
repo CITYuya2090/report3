@@ -145,16 +145,22 @@
  // 平行光源
   var directionalLight1 = new THREE.DirectionalLight(0xffffff);
   directionalLight1.position.set(100, 100, 100);
+  // ライトに影を有効にする
+  directionalLight1.castShadow = true;
   // シーンに追加
   scene.add(directionalLight1);
 
   var directionalLight2 = new THREE.DirectionalLight(0xffffff);
   directionalLight2.position.set(-100, 100, 100);
+  // ライトに影を有効にする
+  directionalLight2.castShadow = true;
   // シーンに追加
   scene.add(directionalLight2);
 
   var directionalLight3 = new THREE.DirectionalLight(0xffffff);
   directionalLight3.position.set(100, -100, 100);
+  // ライトに影を有効にする
+  directionalLight3.castShadow = true;
   // シーンに追加
   scene.add(directionalLight3);
     
@@ -163,9 +169,7 @@
   // シーンに追加
   //scene.add(directionalLight4);
     
-  // ライトに影を有効にする
-  light.castShadow = true;
-  scene.add(light);
+  
   
  tick();
     
