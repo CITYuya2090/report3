@@ -107,9 +107,29 @@
   // 箱を作成
   var geometry = new THREE.BoxGeometry(3, 0.75, 1.5);
   var box = new THREE.Mesh(geometry, mat3);
-  box.rotation.set( 0, -Math.PI/1.325, 0 );
-  box.position.set(1,1,15);
+  var box2 = new THREE.Mesh(geometry, mat3);
+  var box3 = new THREE.Mesh(geometry, mat3);
+  var box4 = new THREE.Mesh(geometry, mat3);
+  var box5 = new THREE.Mesh(geometry, mat3);
+  var box6 = new THREE.Mesh(geometry, mat3);
+  box.rotation.set( 0, -Math.PI/1.315, 0 );
+  box2.rotation.set( 0, -Math.PI/1.315, 0 );
+  box3.rotation.set( 0, -Math.PI/1.315, 0 );  
+  box4.rotation.set( 0, -Math.PI/1.315, 0 );
+  box5.rotation.set( 0, -Math.PI/1.315, 0 );
+  box6.rotation.set( 0, -Math.PI/1.315, 0 );
+  box.position.set(16,1,2);
+  box2.position.set(8.5,1,8.5);
+  box3.position.set(1,1,15);
+  box4.position.set(-16,1,-2);
+  box5.position.set(-8.5,1,-8.5);
+  box6.position.set(-1,1,-15);
   scene.add( box );
+  scene.add( box2 );
+  scene.add( box3 );
+  scene.add( box4 );
+  scene.add( box5 );
+  scene.add( box6 );
     
  // 平行光源
   var directionalLight1 = new THREE.DirectionalLight(0xffffff);
