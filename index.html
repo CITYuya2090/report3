@@ -49,10 +49,10 @@ var textureLoader = new THREE.TextureLoader();
   mat.bumpscale = 0.5;
     
   // ピラミッド作成
-  //var coneGeometry = new THREE.ConeGeometry( 10, 13, 4); 
+  var coneGeometry = new THREE.ConeGeometry( 10, 13, 4); 
   //半径、高さ、底面の分割数
-  //var cone = new THREE.Mesh(coneGeometry, mat);
-  //scene.add(cone);
+  var cone = new THREE.Mesh(coneGeometry, mat);
+  scene.add(cone);
     
   // テクスチャー読み込み2
 var textureLoader = new THREE.TextureLoader();  
@@ -70,7 +70,7 @@ var textureLoader = new THREE.TextureLoader();
   //var planeMaterial = new THREE.MeshBasicMaterial({color: 0x00ff00});
   var plane = new THREE.Mesh(planeGeometry,mat2);
   plane.rotation.set( -Math.PI/2, 0, 0 );
-  plane.position.set(0,-6.5,0);
+  plane.position.set(0,-3,0);
   scene.add( plane );
   
   // 円柱を作成
