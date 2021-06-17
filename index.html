@@ -30,7 +30,7 @@
     // カメラを作成
     const camera = new THREE.PerspectiveCamera(45, width / height);
     // カメラの初期座標を設定
-    camera.position.set(0, 0, 3);
+    camera.position.set(0, 0, 0.5);
     
     // カメラコントローラーを作成
     const controls = new THREE.OrbitControls(camera,document.body);
@@ -44,7 +44,7 @@ var textureLoader = new THREE.TextureLoader();
   // バンプマップ読み込み
   var bump = textureLoader.load("metal_bump.png");
   mat.bumpMap = bump;
-  mat.bumpscale = 0.2;
+  mat.bumpscale = 0.3;
 
   // 箱を作成
   var geometry = new THREE.BoxGeometry(1, 1, 1);
