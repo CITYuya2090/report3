@@ -68,6 +68,7 @@
   // 平面を作成
   var planeGeometry = new THREE.PlaneGeometry(50,50,50,50);
   var plane = new THREE.Mesh(planeGeometry,mat2);
+  plane.receiveShadow = true;
   plane.rotation.set( -Math.PI/2, 0, 0 );
   plane.position.set(0,-6.5,0);
   scene.add( plane );
@@ -117,6 +118,12 @@
   var box4 = new THREE.Mesh(geometry, mat3);
   var box5 = new THREE.Mesh(geometry, mat3);
   var box6 = new THREE.Mesh(geometry, mat3);
+  box.castShadow = true; 
+  box2.castShadow = true; 
+  box3.castShadow = true; 
+  box4.castShadow = true; 
+  box5.castShadow = true; 
+  box6.castShadow = true; 
   box.rotation.set( 0, -Math.PI/1.315, 0 );
   box2.rotation.set( 0, -Math.PI/1.315, 0 );
   box3.rotation.set( 0, -Math.PI/1.315, 0 );  
@@ -155,10 +162,10 @@
   // シーンに追加
   scene.add(directionalLight1);
 
-  //var directionalLight2 = new THREE.DirectionalLight(0xffffff);
-  //directionalLight2.position.set(-100, 100, 100);
+  var directionalLight2 = new THREE.DirectionalLight(0xffffff);
+  directionalLight2.position.set(-100, 100, 100);
   // シーンに追加
-  //scene.add(directionalLight2);
+  scene.add(directionalLight2);
 
   var directionalLight3 = new THREE.DirectionalLight(0xffffff);
   directionalLight3.position.set(100, -100, 100);
