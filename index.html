@@ -79,14 +79,21 @@ var textureLoader = new THREE.TextureLoader();
   var cylinder = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
   var cylinder2 = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
   var cylinder3 = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
-  //var cylinder4 = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
+  var cylinder4 = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
+  var cylinder5 = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
+  var cylinder6 = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
   cylinder.position.set( 16, -3, 2 );
   cylinder2.position.set( 8.5, -3, 8.5 );
   cylinder3.position.set( 1, -3, 15 );    //完成
-  //cylinder.position.set( 15, -2, 5 );
+  cylinder.position.set( -16, -3, -2 );
+  cylinder.position.set( -8.5, -3, -8.5 );
+  cylinder.position.set( -1, -3, -15 );
   scene.add( cylinder );
   scene.add( cylinder2 );
   scene.add( cylinder3 );
+  scene.add( cylinder4 ); 
+  scene.add( cylinder5 );
+  scene.add( cylinder6 );
     
   
 
