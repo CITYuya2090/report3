@@ -60,6 +60,11 @@ var textureLoader = new THREE.TextureLoader();
   var mat2 = new THREE.MeshPhongMaterial();
   mat2.map = texture;
     
+   // バンプマップ読み込み2
+  var bump = textureLoader.load("sand_bump.jpg");
+  mat.bumpMap = bump;
+  mat.bumpscale = 0.3;
+    
   // 平面を作成
   var planeGeometry = new THREE.PlaneGeometry(50,50,50,50);
   //var planeMaterial = new THREE.MeshBasicMaterial({color: 0x00ff00});
