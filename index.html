@@ -70,14 +70,14 @@ var textureLoader = new THREE.TextureLoader();
   //var planeMaterial = new THREE.MeshBasicMaterial({color: 0x00ff00});
   var plane = new THREE.Mesh(planeGeometry,mat2);
   plane.rotation.set( -Math.PI/2, 0, 0 );
-  plane.position.set(0,-3,0);
+  plane.position.set(0,-6.5,0);
   scene.add( plane );
   
   // 円柱を作成
   var cylinderGeometry = new THREE.CylinderGeometry( 0.7, 0.7, 10, 50 );
   var cylinderMaterial = new THREE.MeshPhongMaterial( {color: 0x0000ff} );
   var cylinder = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
-  cylinder.position.set( 15, -6.5, 5 );
+  cylinder.position.set( 15, -3, 5 );
   scene.add( cylinder );
 
 
