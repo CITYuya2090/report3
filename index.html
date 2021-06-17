@@ -55,7 +55,6 @@
   scene.add(cone);
     
   // テクスチャー読み込み2
-  var textureLoader = new THREE.TextureLoader();  
   var texture2 = textureLoader.load("sand.jpg");
   var mat2 = new THREE.MeshPhongMaterial();
   mat2.map = texture2;
@@ -73,7 +72,6 @@
   scene.add( plane );
   
   // テクスチャー読み込み3
-  var textureLoader = new THREE.TextureLoader();  
   var texture3 = textureLoader.load("sandstone.jpg");
   var mat3 = new THREE.MeshPhongMaterial();
   mat3.map = texture3;
@@ -130,6 +128,17 @@
   scene.add( box4 );
   scene.add( box5 );
   scene.add( box6 );
+    
+    
+  // ラクダテクスチャー読み込み
+  var texture4 = textureLoader.load("img/rakuda.png");
+  var mat4 = new THREE.MeshLambertMaterial({transparent: true});
+  mat4.map = texture4;
+
+  // ラクダを作成
+  var geometry = new THREE.PlaneGeometry(-20, 20);
+  var rakuda = new THREE.Mesh(geometry, mat4);
+  scene.add(rakuda);
     
  // 平行光源
   var directionalLight1 = new THREE.DirectionalLight(0xffffff);
