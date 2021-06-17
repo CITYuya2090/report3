@@ -110,6 +110,11 @@
   plane.rotation.set( -Math.PI/2, 0, 0 );
   plane.position.set(1,6,15);
   scene.add( plane );
+  
+  // 箱を作成
+  var geometry = new THREE.BoxGeometry(2, 0.5, 1);
+  var box = new THREE.Mesh(geometry, mat3);
+  box.position.set(1,6,15);
     
  // 平行光源
   var directionalLight1 = new THREE.DirectionalLight(0xffffff);
