@@ -52,7 +52,6 @@
   var coneGeometry = new THREE.ConeGeometry( 10, 13, 4); 
   //半径、高さ、底面の分割数
   var cone = new THREE.Mesh(coneGeometry, mat);
-  cone.castShadow = true; 
   scene.add(cone);
     
   // テクスチャー読み込み2
@@ -68,7 +67,6 @@
   // 平面を作成
   var planeGeometry = new THREE.PlaneGeometry(50,50,50,50);
   var plane = new THREE.Mesh(planeGeometry,mat2);
-  plane.receiveShadow = true;
   plane.rotation.set( -Math.PI/2, 0, 0 );
   plane.position.set(0,-6.5,0);
   scene.add( plane );
